@@ -20,7 +20,7 @@ class Trail extends Object_AbstractClass  {
     }
 
     draw() {
-        for (let i = 0; i < this.altPoss.length - 3; i++) {
+        for (let i = 0; i < this.altPoss.length; i++) {
             this.x = this.altPoss[i].x;
             this.y = this.altPoss[i].y;
             this.color.setAlpha((0.2 / this.length) * i);

@@ -3,6 +3,7 @@ class BackgroundStar extends Object_AbstractClass  {
     constructor(x, y, color) {
         super(x, y, color);
         this.speed = Math.random();
+//        this.trail = new Trail(1, this.color, 15);
     }
 
     update() {

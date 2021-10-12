@@ -9,7 +9,6 @@ class CelestialBody extends Object_AbstractClass  {
         this.accelerationY = 0;
         this.size = size;
         this.mass = mass;
-
         game.objectHandler.addObject(this);
     }
 

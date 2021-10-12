@@ -6,19 +6,13 @@ class ObjectHandler{
     }
 
     update () {
-        if (debug) {
-            trails = true;
-            bgSF = true;
-        }
-        else {
-            window.wallpaperPropertyListener = {
-                applyUserProperties: function (properties) {
-                    if (properties.trails) {
-                        trails = properties.trails.value
-                    }
-                    if (properties.bgsf) {
-                        bgSF = properties.bgsf.value
-                    }
+        window.wallpaperPropertyListener = {
+            applyUserProperties: function (properties) {
+                if (properties.trails) {
+                    trails = properties.trails.value
+                }
+                if (properties.bgsf) {
+                    bgSF = properties.bgsf.value
                 }
             }
         }

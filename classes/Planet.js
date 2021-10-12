@@ -1,8 +1,8 @@
 class Planet extends CelestialBody {
 
-    constructor(x, y, velocityX, velocityY, size, mass, color) {
+    constructor(x, y, velocityX, velocityY, size, mass, color, trailLength = 0) {
         super(x, y, velocityX, velocityY, size, mass, color);
-        this.trail = new Trail(this.size, this.color, 50);
+        this.trail = new Trail(this.size, this.color, trailLength);
     }
 
     update() {
