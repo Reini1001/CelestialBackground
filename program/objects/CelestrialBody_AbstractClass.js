@@ -31,12 +31,14 @@ class CelestialBody_AbstractClass extends Object_AbstractClass {
                 let deltaX = object.x - this.x;
                 let deltaY = object.y - this.y;
                 let distance = Math.sqrt(Math.pow(deltaX, 2) + Math.pow(deltaY, 2));
-                let force = G * ((this.mass * object.mass) / Math.pow(distance, 2));
-                let direction = Math.atan2(deltaY, deltaX);
-                this.accelerationX = force * Math.cos(direction) / this.mass;
-                this.accelerationY = force * Math.sin(direction) / this.mass;
-                this.velocityX += this.accelerationX;
-                this.velocityY += this.accelerationY;
+                if (distance > this.size + object.size) {
+                    let force = G * ((this.mass * object.mass) / Math.pow(distance, 2));
+                    let direction = Math.atan2(deltaY, deltaX);
+                    this.accelerationX = force * Math.cos(direction) / this.mass;
+                    this.accelerationY = force * Math.sin(direction) / this.mass;
+                    this.velocityX += this.accelerationX;
+                    this.velocityY += this.accelerationY;
+                }
             }
         });
     }

@@ -19,7 +19,9 @@ class ObjectHandler {
     draw() {
         program.canvasHandler.clearCanvas();
         this.background.draw();
-        this.objects.forEach(object => object.draw());
+        this.objects.forEach(object => {
+            object.draw()
+        });
     }
 
     getObjects() {
