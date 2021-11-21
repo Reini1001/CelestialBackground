@@ -9,7 +9,6 @@ class UserPlanet extends CelestialBody_AbstractClass {
         this.y = program.inputHandler.mouse.y;
         this.mass = 1000 * program.inputHandler.mouse.one;
         this.color.setAlpha(program.inputHandler.mouse.one * 0.25);
-        console.debug(this.x, this.y, program.inputHandler.mouse.one, this.color.getColorString());
         super.update();
     }
 

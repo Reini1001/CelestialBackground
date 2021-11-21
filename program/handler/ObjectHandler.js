@@ -6,6 +6,9 @@ class ObjectHandler {
     }
 
     update() {
+        if (this.objects.length <= 2) {
+            program.restart();
+        }
         program.wallpaperPropertyHandler.update();
         this.background.update();
         this.objects.forEach((object) => {
